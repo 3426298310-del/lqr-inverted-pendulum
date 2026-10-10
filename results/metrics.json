@@ -1,0 +1,163 @@
+{
+  "generated_at": "2026-10-10T05:14:26Z",
+  "matlab_version": "24.2.0.2712019 (R2024b)",
+  "parameters": {
+    "M": 0.5,
+    "m": 0.2,
+    "b": 0.1,
+    "l": 0.3,
+    "I": 0.006,
+    "g": 9.81
+  },
+  "state_order": [
+    "x_m",
+    "v_m_s",
+    "theta_rad",
+    "omega_rad_s"
+  ],
+  "angle_convention": "xc=x-l*sin(theta); theta=0 upright",
+  "sample_interval_s": 0.001,
+  "solver": "ode45, RelTol=1e-10, AbsTol=1e-12, MaxStep=0.01; pulse split at 1 and 1.2 s",
+  "A": [
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      -0.18181818181818182,
+      2.6754545454545462,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      -0.45454545454545453,
+      31.213636363636365,
+      0
+    ]
+  ],
+  "B": [
+    0,
+    1.8181818181818181,
+    0,
+    4.545454545454545
+  ],
+  "Q": [
+    [
+      120,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      8,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      600,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      12
+    ]
+  ],
+  "R": 0.08,
+  "K": [
+    -38.729833462073763,
+    -36.383006218150491,
+    160.92576417344102,
+    29.67870562916054
+  ],
+  "CARE_relative_residual": 1.6387874910551088E-14,
+  "open_poles": [
+    0,
+    -0.14283166170368311,
+    -5.6069421287518022,
+    5.5679556086373019
+  ],
+  "closed_poles_real_imag": [
+    [
+      -58.658131198004035,
+      0
+    ],
+    [
+      -7.0133690897844589,
+      0
+    ],
+    [
+      -1.6313024513337857,
+      1.2396774405135087
+    ],
+    [
+      -1.6313024513337857,
+      -1.2396774405135087
+    ]
+  ],
+  "initial": [
+    {
+      "case": "A",
+      "cart_peak_m": 0.062835085133129881,
+      "angle_peak_deg": 5,
+      "control_force_peak_N": 14.043422180572385,
+      "angle_settling_pm_0p1deg_s": 2.422,
+      "cart_settling_pm_0p002m_s": 2.148
+    },
+    {
+      "case": "B",
+      "cart_peak_m": 0.065726983049303828,
+      "angle_peak_deg": 5,
+      "control_force_peak_N": 9.3111189351923684,
+      "angle_settling_pm_0p1deg_s": 2.463,
+      "cart_settling_pm_0p002m_s": 2.172
+    },
+    {
+      "case": "C",
+      "cart_peak_m": 0.062485800565114338,
+      "angle_peak_deg": 5,
+      "control_force_peak_N": 15.867136963239039,
+      "angle_settling_pm_0p1deg_s": 2.437,
+      "cart_settling_pm_0p002m_s": 2.17
+    }
+  ],
+  "pulse": {
+    "case": "A",
+    "cart_peak_m": 0.010034406461165999,
+    "angle_peak_deg": 0.62309756947721973,
+    "control_force_peak_N": 2.2394283855776571,
+    "angle_settling_pm_0p1deg_s": 2.009,
+    "cart_settling_pm_0p002m_s": 2.894,
+    "angle_recovery_after_pulse_end_s": 0.80899999999999994,
+    "cart_recovery_after_pulse_end_s": 1.6940000000000002
+  },
+  "nonlinear_extension": {
+    "case": "A",
+    "cart_peak_m": 0.063238871681592826,
+    "angle_peak_deg": 5,
+    "control_force_peak_N": 14.043422180572385,
+    "angle_settling_pm_0p1deg_s": 2.426,
+    "cart_settling_pm_0p002m_s": 2.149
+  },
+  "initial_A_angle_settling_at_10ms_s": 2.43,
+  "pulse_half_sample_peak_difference_m": 0,
+  "pulse_analytic_max_abs_state_error": 1.6525253387911221E-12,
+  "simulink_max_abs_state_error": {
+    "open": 2.1501582523342222E-6,
+    "initial_A": 1.4567791417618992E-11,
+    "pulse_A": 2.2676860389481135E-12
+  }
+}
